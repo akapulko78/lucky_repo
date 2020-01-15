@@ -3,6 +3,8 @@ package Java_Level_1.lesson_4;
 import java.util.Random;
 import java.util.Scanner;
 
+import static java.lang.Character.getNumericValue;
+
 public class lesson4 {
 
     private static Scanner scanner = new Scanner(System.in);
@@ -25,6 +27,8 @@ public class lesson4 {
     public static void main(String[] args) { // #1
         initMap(); // #2
         game(); // #3
+
+
     }
 
 
