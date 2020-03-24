@@ -1,13 +1,15 @@
 package Spring_framework.Lesson_1;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class Client {
     public static void main(String[] args) {
-        /*Camera camera = new Camera();
-        ICameraRoll cameraRoll = new ColorCameraRoll();
-        camera.setCameraRoll(cameraRoll);*//*
-        camera.doPhotograph();*/
-        Assistant assistant = new Assistant();
+       /* Assistant assistant = new Assistant();
         CameraImp cameraImp = assistant.getCamera();
-        cameraImp.doPhotograph();
+        cameraImp.doPhotograph();*/
+        ApplicationContext context = new ClassPathXmlApplicationContext("Spring_framework/resources/config.xml");
+        ICamera camera = context.getBean("camera",ICamera.class);
+        camera.doPhotograph();
     }
 }
