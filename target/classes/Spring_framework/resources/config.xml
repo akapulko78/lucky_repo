@@ -5,18 +5,18 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="cameraRoll" class="Spring_framework.Lesson_1.ColorCameraRoll"></bean>
-<bean id="camera" class="Spring_framework.Lesson_1.CameraImp">
-<property name="cameraRoll">
-    <ref bean="cameraRoll"/>
-</property>
-</bean>
+
 
 
         <!--<bean id="cppCodeCreator" class="com.geekbrains.spring.CppCodeCreator">-->
         <!--<constructor-arg ref="animalsClassNameGenerator" />-->
         <!--</bean>-->
-        <!--<context:component-scan base-package="Lesson_1" />-->
+        <context:component-scan base-package="Spring_framework.Lesson_1" />
+
+    <bean id="helloman" class="Spring_framework.Lesson_1.HelloManOnceSay">
+
+        <constructor-arg value="Dan"/>
+    </bean>
 
         <!--&lt;!&ndash;<bean id="cameraRoll" class="Lesson_1.ColorCameraRoll"></bean>&ndash;&gt;-->
 
@@ -26,5 +26,12 @@
         <!--<ref bean="cameraRoll"/>-->
         <!--</property>-->
         <!--</bean>-->
+
+   <!-- <bean id="cameraRoll" class="Spring_framework.Lesson_1.ColorCameraRoll"></bean>-->
+   <!-- <bean id="camera" class="Spring_framework.Lesson_1.CameraImp">
+        <property name="cameraRoll">
+            <ref bean="cameraRoll"/>
+        </property>
+    </bean>-->
 
         </beans>

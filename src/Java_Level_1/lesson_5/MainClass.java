@@ -4,7 +4,7 @@ public class MainClass {
 
     private static Employee[] employees = new Employee[5];
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
 
         employees[0] = new Employee("Гаврилов", "проектный менеджер",
                 "dgavrilovdv@gmail.com", "+71", 65000, 30);
@@ -22,7 +22,7 @@ public class MainClass {
                 employees[i].employeeInfo();
             }
         }
-    }
+    }*/
 
     public static void older_40() {
 
