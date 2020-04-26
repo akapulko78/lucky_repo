@@ -1,11 +1,9 @@
-package Java_Level_1.lesson_4;
+package Java_Level_1.lesson_8;
 
 import java.util.Random;
 import java.util.Scanner;
 
-import static java.lang.Character.getNumericValue;
-
-public class lesson4 {
+public class GameProcess {
 
     private static Scanner scanner = new Scanner(System.in);
     private static Random random = new Random();
@@ -24,15 +22,13 @@ public class lesson4 {
     private static int emptyFields;
 
 
-    public static void main(String[] args) { // #1
-        initMap(); // #2
-        game(); // #3
+//    public static void main(String[] args) { // #1
+//        initMap(); // #2
+//        game(); // #3
+//    }
 
 
-    }
-
-
-    private static void game() {
+    void game() {
         while (true) {
             for (char player : players) {
                 if (isFilled()) {
@@ -71,15 +67,15 @@ public class lesson4 {
         }
     }
 
-    private static void initMap() { // #2.1
+    void initMap() { // #2.1
         map = new char[SIZE][SIZE];
         emptyFields = SIZE * SIZE;
         for (int row = 0; row < map.length; row++) {
             for (int column = 0; column < map.length; column++) {
                 map[row][column] = DOT_EMPTY;
-                System.out.print(" " + DOT_EMPTY);
+                //System.out.print(" " + DOT_EMPTY);
             }
-            System.out.println();
+            //System.out.println();
         }
     }
 
@@ -169,6 +165,7 @@ public class lesson4 {
         lastRow = row; // последний ход человека
         lastCol = column; // последний ход человека
         map[row][column] = DOT_X;
+
     }
 
 
