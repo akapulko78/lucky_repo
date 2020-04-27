@@ -1,8 +1,8 @@
 package Java_Level_2.lesson_1.obstacles;
 
-import Java_Level_2.lesson_1.Team;
+import Java_Level_2.lesson_1.Participant;
 
-public class Wall extends Course{
+public class Wall extends Obstacle {
 
     private int height;
 
@@ -11,10 +11,7 @@ public class Wall extends Course{
     }
 
     @Override
-    public void doIt(Team[] team) {
-        for (Team thisTeam : team) {
-            thisTeam.jump(height);
-        }
+    public void doIt(Participant participant) {
+        participant.jump(height);
     }
-
 }

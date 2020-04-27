@@ -1,5 +1,7 @@
 package Java_Level_2.lesson_1.animals;
 
+import Java_Level_2.lesson_1.animals.Animal;
+
 public class Dog extends Animal {
 
     public Dog(String name, int maxRunDistance,
@@ -8,11 +10,11 @@ public class Dog extends Animal {
     }
 
     @Override
-    public void makeVoice() {
-        System.out.println("gaw");
+    public void voice() {
+        System.out.println("Гав");
     }
 
     public void swim() {
-        System.out.println(getName() + " swim");
+        System.out.println(getName() + " плывет");
     }
 }

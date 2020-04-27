@@ -1,7 +1,8 @@
 package Java_Level_2.lesson_1.animals;
 
+import Java_Level_2.lesson_1.animals.Animal;
+
 public class Cat extends Animal {
-    private String name;
 
     public Cat(String name, int maxRunDistance,
                int maxJumpHeight, int maxSwimDistance) {
@@ -9,7 +10,7 @@ public class Cat extends Animal {
     }
 
     @Override
-    public void makeVoice() {
-        System.out.println("mya");
+    public void voice() {
+        System.out.println("Мяу");
     }
 }

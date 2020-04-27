@@ -1,18 +1,14 @@
 package Java_Level_2.lesson_1.animals;
 
-import Java_Level_2.lesson_1.Team;
+import Java_Level_2.lesson_1.Participant;
 
-public abstract class Animal extends Team {
+public abstract class Animal implements Participant {
+
     private String name;
     private boolean onDistance;
     private int maxRunDistance;
     private int maxJumpHeight;
     private int maxSwimDistance;
-
-
-    public boolean isOnDistance() {
-        return onDistance;
-    }
 
     public Animal(String name, int maxRunDistance,
                   int maxJumpHeight, int maxSwimDistance) {
@@ -27,24 +23,28 @@ public abstract class Animal extends Team {
         return name;
     }
 
-    public abstract void makeVoice();
+    public boolean isOnDistance() {
+        return onDistance;
+    }
+
+    public abstract void voice();
 
     @Override
     public void run(int distance) {
         if (distance <= maxRunDistance) {
-            System.out.println(name + " successfully run!");
+            System.out.println(name + " успешно пробежал кросс");
         } else {
-            System.out.println(name + " fail");
+            System.out.println(name + " не справился с кроссом");
             onDistance = false;
         }
     }
 
     @Override
-    public void jump(int distance) {
-        if (distance <= maxJumpHeight) {
-            System.out.println(name + " successfully jumped!");
+    public void jump(int height) {
+        if (height <= maxJumpHeight) {
+            System.out.println(name + " успешно перепрыгнул стену");
         } else {
-            System.out.println(name + " fail");
+            System.out.println(name + " не справился с прыжком");
             onDistance = false;
         }
     }
@@ -52,18 +52,18 @@ public abstract class Animal extends Team {
     @Override
     public void swim(int distance) {
         if (maxSwimDistance == 0) {
-            System.out.println(name + " can't swim");
+            System.out.println(name + " не умеет плавать");
             onDistance = false;
         } else if (distance <= maxSwimDistance) {
-            System.out.println(name + " successfully swum!");
+            System.out.println(name + " успешно переплыл");
         } else {
-            System.out.println(name + " fail");
+            System.out.println(name + " не смог переплыть");
             onDistance = false;
         }
     }
 
     @Override
     public String toString() {
-        return name + ": " + (isOnDistance() ? " on distance" : " fail");
+        return name + " : " + (isOnDistance() ? "на дистанции" : "сошел с дистанции");
     }
 }

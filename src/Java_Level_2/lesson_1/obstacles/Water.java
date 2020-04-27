@@ -1,8 +1,8 @@
 package Java_Level_2.lesson_1.obstacles;
 
-import Java_Level_2.lesson_1.Team;
+import Java_Level_2.lesson_1.Participant;
 
-public class Water extends Course {
+public class Water extends Obstacle {
 
     private int length;
 
@@ -11,9 +11,7 @@ public class Water extends Course {
     }
 
     @Override
-    public void doIt(Team[] team) {
-        for (Team thisTeam : team) {
-            thisTeam.swim(length);
-        }
+    public void doIt(Participant participant) {
+        participant.swim(length);
     }
 }
