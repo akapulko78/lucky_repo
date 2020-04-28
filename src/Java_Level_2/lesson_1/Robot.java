@@ -59,6 +59,7 @@ public class Robot implements Participant {
 
     @Override
     public String toString() {
-        return name + " : " + (isOnDistance() ? "на дистанции" : "сошел с дистанции");
+//        return name + " : " + (isOnDistance() ? "на дистанции" : "сошел с дистанции");
+        return name;
     }
 }
