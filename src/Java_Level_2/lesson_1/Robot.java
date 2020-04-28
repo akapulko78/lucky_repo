@@ -20,6 +20,10 @@ public class Robot implements Participant {
         return onDistance;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public void run(int distance) {
         if (distance <= maxRunDistance) {

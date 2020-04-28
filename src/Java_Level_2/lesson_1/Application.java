@@ -37,6 +37,10 @@ public class Application {
 
         course.doIt1(team);
 
+        team.showResults();
+
+        team.showInfo();
+
         /*for (Participant participant : participants) {
             for (Obstacle obstacle : obstacles) {
                 obstacle.doIt(participant);

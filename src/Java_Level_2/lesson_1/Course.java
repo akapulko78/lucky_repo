@@ -11,9 +11,11 @@ public class Course {
 
     public void doIt1(Team team) {
         for (Obstacle o : obstacles) {
-            for (Participant p :
-                    team.getParticipants()) {
+            for (Participant p : team.getParticipants()) {
                 o.doIt(p);
+                /*if (!p.isOnDistance()){
+                    break;
+                }*/
             }
         }
     }

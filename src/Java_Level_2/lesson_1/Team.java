@@ -1,7 +1,7 @@
 package Java_Level_2.lesson_1;
 
 public class Team {
-    Participant [] participants;
+    Participant[] participants;
 
     String name;
 
@@ -16,5 +16,19 @@ public class Team {
 
     public String getName() {
         return name;
+    }
+
+
+    public void showResults() {
+        for (Participant p : participants) {
+            System.out.println(p);
+        }
+    }
+
+    public void showInfo() {
+        for (Participant p : participants) {
+
+            System.out.println(p);
+        }
     }
 }
