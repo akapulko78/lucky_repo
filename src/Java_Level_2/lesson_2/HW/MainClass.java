@@ -2,15 +2,15 @@ package Java_Level_2.lesson_2.HW;
 
 public class MainClass {
 
-    private static String[][] numbers =
+    private static final String[][] numbers =
             new String[][]{{"1", "2", "3", "4"}, {"1", "2", "3", "4"},
                     {"1", "2", "3", "4"}};
 
-    private static String[][] numbers1 =
+    private static final String[][] numbers1 =
             new String[][]{{"s", "2", "3", "4"}, {"1", "2", "3", "4"},
                     {"1", "2", "3", "4"}, {"1", "2", "3", "4"}};
 
-    private static String[][] numbers2 =
+    private static final String[][] numbers2 =
             new String[][]{{"1", "2", "3", "4"}, {"1", "2", "3", "4"},
                     {"1", "2", "3", "4"}, {"1", "2", "3", "4"}};
     private static int sumOfNumbers;
@@ -41,13 +41,16 @@ public class MainClass {
         for (String[] stringNumber : stringNumbers) {
             for (int j = 0; j < stringNumber.length; j++) {
                 if (stringNumber.length != 4) {
-                    throw new MyArraySizeException();
+                    throw new MyArraySizeException(); // эта запись правоцирует переход к ближайшему
+                    // блоку Catch, обрабатывающему это исключение
                 }
                 try {
                     sumOfNumbers += Integer.parseInt(stringNumber[j]);
-                } catch (NumberFormatException ex) {
-                    throw new MyArrayDataException(stringNumber[j]);// чтобы передать что-то в
-                    // качестве параметра, необходимо создлать конструктор в классе исключения
+                } catch (NumberFormatException ex) { //предыдущая строка генерирует это исключение
+                    throw new MyArrayDataException(stringNumber[j], ex);// чтобы передать что-то в
+                    // качестве параметра, необходимо создлать конструктор в классе исключения.
+                    // В этот конструктор переадем строку с исключением (с буквой вместо числа)
+                    // и исключение(ех), из-за которого вызвано наше исключение
                 }
             }
         }

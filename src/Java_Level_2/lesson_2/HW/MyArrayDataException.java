@@ -4,7 +4,13 @@ import org.w3c.dom.ls.LSOutput;
 
 public class MyArrayDataException extends Exception {
 
+    private String value;
+
+    public MyArrayDataException(String value, Throwable cause) {
+        super("illegal value " + value + ": " + cause);
+    }
+
     public MyArrayDataException(String value) {
-        super("illegal value " + value);
+        this(value, null);
     }
 }
