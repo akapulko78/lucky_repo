@@ -1,9 +1,9 @@
 package Java_Level_2.lesson_1;
 
 public class Team {
-    Participant[] participants;
+    private final Participant[] participants;
 
-    String name;
+    private final String name;
 
     public Team(Participant[] participants, String name) {
         this.participants = participants;
@@ -27,7 +27,7 @@ public class Team {
     }
 
     public void showInfo() {
-        System.out.println("Team " + name +  " contains:" );
+        System.out.println("Team " + name + " contains:");
         for (Participant p : participants) {
             System.out.println(p);
         }

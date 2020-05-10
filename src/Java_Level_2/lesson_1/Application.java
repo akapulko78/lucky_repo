@@ -35,7 +35,7 @@ public class Application {
                 new Water(7)
         });
 
-        course.doIt1(team);
+        course.doIt(team);
 
         team.showInfo();
 
