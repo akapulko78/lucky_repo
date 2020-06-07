@@ -19,9 +19,7 @@ public class MainClass {
        /* System.out.println(numbers.length);
         System.out.println(numbers1.length);*/
         try {
-            //massiveOfNumbers(numbers2);
             massiveOfNumbers(numbers1);
-            //massiveOfNumbers(numbers);
         } catch (MyArraySizeException | MyArrayDataException myArraySizeException) {
             myArraySizeException.printStackTrace();
         }
